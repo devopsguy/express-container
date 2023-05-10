@@ -1,0 +1,14 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "description": "A simple Hello World example based on Express.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Octavian Helm",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
