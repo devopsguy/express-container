@@ -1,0 +1,22 @@
+name: Grab version from package.json
+
+on:
+    push:
+        branches:
+            - main
+            - develop
+    workflow_dispatch:
+
+jobs:
+    get-version:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            
+            - name: 'Get version from package.json'
+              id: get-version
+              run: echo ::set-output name=VERSION::$(node -p "require('./package.json').version")
+            
+            - name: 'Print out version'
+              run: echo ${{ steps.get-version.outputs.VERSION }}'
