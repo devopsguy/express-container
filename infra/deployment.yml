@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-container
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: express-container
+  template:
+    metadata:
+      labels:
+        app: express-container
+    spec:
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: express-container
+        image: devop5guy/express-container:0.1.7
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "32Mi"
+        ports:
+        - containerPort: 3000
