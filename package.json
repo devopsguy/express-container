@@ -1,6 +1,6 @@
 {
   "name": "hello-world",
-  "version": "0.1.3",
+  "version": "0.1.7",
   "description": "A simple Hello World example based on Express.js",
   "main": "app.js",
   "scripts": {
