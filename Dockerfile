@@ -15,5 +15,5 @@ WORKDIR /usr/src/app
 EXPOSE 3000
 USER node
 COPY --from=builder --chown=node:node /usr/src/app/node_modules ./node_modules
-COPY app.js .
+COPY src/ .
 CMD [ "node", "app.js" ]
