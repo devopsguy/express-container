@@ -2,5 +2,7 @@ node_modules
 npm-debug.log
 .gitignore
 .git
+.github
 .dockerignore
 Dockerfile
+infra
